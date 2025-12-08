@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -78,10 +79,19 @@
         brd_sym_layer {
             display-name = "Brd Func";
             bindings = <
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME              &kp UP_ARROW          &kp END    &kp C_VOLUME_UP    &trans
-&trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans             &trans
-                        &trans  &trans  &trans     &trans         &trans                &trans
+&trans      &trans  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME              &kp UP_ARROW          &kp END    &kp C_VOLUME_UP    &trans
+&bt BT_NXT  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
+&bt BT_PRV  &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans             &bt BT_CLR
+                            &trans  &trans  &trans     &trans         &trans                &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
