@@ -8,18 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-behaviors {
-    hm: home_row_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOME_ROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <175>;
-        quick-tap-ms = <125>;    // Forces a tap if pressed twice quickly
-        flavor = "tap-preferred"; // Resolves rolling overlaps in favor of typing
-        bindings = <&kp>, <&kp>;
-    };
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -105,6 +93,18 @@ behaviors {
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+        };
+    };
+
+    behaviors {
+        hm: home_row_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <125>;    // Forces a tap if pressed twice quickly
+            flavor = "tap-preferred"; // Resolves rolling overlaps in favor of typing
+            bindings = <&kp>, <&kp>;
         };
     };
 };
