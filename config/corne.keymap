@@ -101,10 +101,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;          // Slightly bumped to give intentional holds time
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <125>;    // Prevents mods during active typing rolls
+            flavor = "balanced";
+            require-prior-idle-ms = <150>; // Stops rolls mid-word ("in", "th")
+            hold-trigger-on-release;       // Waits to see if you actually hold T
             bindings = <&kp>, <&kp>;
         };
     };
