@@ -52,9 +52,8 @@
             key-positions = <21 22>;
         };
 
-        // 36-key trial: outer pinky column (positions 0, 11, 12, 23, 35) is
-        // disabled below, so these three combos give MINUS, GRAVE and
-        // BACKSLASH a home on the remaining 36 keys.
+        // 36-key trial: extra combo paths to MINUS, GRAVE and BACKSLASH,
+        // previewing where they'd live once the outer pinky column is dropped.
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <16 19>;
@@ -84,9 +83,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none      &kp Q        &kp W       &kp F        &kp P       &kp B          &kp J        &kp L            &kp U                &kp Y            &kp SEMICOLON  &none
-&none      &hm LSHFT A  &hm LALT R  &hm LCTRL S  &hm LGUI T  &kp G          &kp M        &hm RGUI N       &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RSHFT O    &none
-&trans     &kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H            &kp COMMA            &kp DOT          &kp FSLH       &none
+&kp ESC    &kp Q        &kp W       &kp F        &kp P       &kp B          &kp J        &kp L            &kp U                &kp Y            &kp SEMICOLON  &kp MINUS
+&kp GRAVE  &hm LSHFT A  &hm LALT R  &hm LCTRL S  &hm LGUI T  &kp G          &kp M        &hm RGUI N       &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RSHFT O    &kp APOSTROPHE
+&trans     &kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H            &kp COMMA            &kp DOT          &kp FSLH       &kp BACKSLASH
                                     &kp ESC      &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &lt 2 BACKSPACE  &kp APOSTROPHE
             >;
         };
