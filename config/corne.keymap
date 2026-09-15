@@ -51,6 +51,30 @@
             bindings = <&kp GREATER_THAN>;
             key-positions = <21 22>;
         };
+
+        // 36-key trial: extra combo paths to MINUS, GRAVE and BACKSLASH,
+        // previewing where they'd live once the outer pinky column is dropped.
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <16 19>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <17 18>;
+        };
+
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <13 22>;
+        };
+
+        // A+O double as LSHFT/RSHFT, so shift+combo_backslash can't be used
+        // for pipe. Z+FSLH echoes the same outer-pinky-column idea one row down.
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <25 34>;
+        };
     };
 
     keymap {
@@ -62,17 +86,17 @@
 &kp ESC    &kp Q        &kp W       &kp F        &kp P       &kp B          &kp J        &kp L            &kp U                &kp Y            &kp SEMICOLON  &kp MINUS
 &kp GRAVE  &hm LSHFT A  &hm LALT R  &hm LCTRL S  &hm LGUI T  &kp G          &kp M        &hm RGUI N       &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RSHFT O    &kp APOSTROPHE
 &trans     &kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H            &kp COMMA            &kp DOT          &kp FSLH       &kp BACKSLASH
-                                    &mo 2        &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &lt 2 BACKSPACE  &mo 2
+                                    &kp ESC      &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &lt 2 BACKSPACE  &kp APOSTROPHE
             >;
         };
 
         sym_num_layer {
             display-name = "Sym Num";
             bindings = <
-&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans    &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
-&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans    &kp PLUS      &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &trans
-&trans  &trans  &kp EXCLAMATION  &kp AT        &kp HASH   &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans
-                                 &trans        &trans     &trans    &trans        &trans        &trans
+&trans   &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans    &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
+&trans   &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans    &kp PLUS      &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &trans
+&trans   &trans  &kp EXCLAMATION  &kp AT        &kp HASH   &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans
+                                  &trans        &trans     &trans    &trans        &trans        &trans
             >;
         };
 
