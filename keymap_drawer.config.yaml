@@ -1,5 +1,0 @@
-draw_config:
-  # Cross-hand combos (G+M, T+N, A+O, Z+/) all sit near the split gap and
-  # overlap when drawn inline on the main layer, so give every combo its
-  # own small diagram instead.
-  separate_combo_diagrams: true
