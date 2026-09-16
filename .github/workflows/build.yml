@@ -1,6 +1,10 @@
 on:
   push:
     branches: [master]
+    paths:
+      - "config/**"
+      - "build.yaml"
+      - ".github/workflows/build.yml"
   workflow_dispatch:
 
 jobs:
