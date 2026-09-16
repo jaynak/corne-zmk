@@ -74,17 +74,18 @@
             layers = <0>;
         };
 
+        // B+J (row 0) and V+K (row 2) echo combo_grave's shape: adjacent
+        // center columns, not mod-tapped, no full-hand pinky stretch like
+        // A+O/Z+FSLH required.
         combo_backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <13 22>;
+            key-positions = <5 6>;
             layers = <0>;
         };
 
-        // A+O double as LSHFT/RSHFT, so shift+combo_backslash can't be used
-        // for pipe. Z+FSLH echoes the same outer-pinky-column idea one row down.
         combo_pipe {
             bindings = <&kp PIPE>;
-            key-positions = <25 34>;
+            key-positions = <29 30>;
             layers = <0>;
         };
     };
