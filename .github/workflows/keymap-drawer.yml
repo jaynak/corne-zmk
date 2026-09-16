@@ -7,3 +7,8 @@ on:
 jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.23.0
+    with:
+      # Rebase each parse onto the last committed drawing so manual combo
+      # positioning (align/offset, to keep the cross-hand combos from
+      # overlapping) survives future keymap edits instead of being wiped.
+      parse_args: "corne:'-b keymap-drawer/corne.yaml'"
