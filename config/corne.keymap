@@ -15,41 +15,49 @@
         combo_lbracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <4 3>;
+            layers = <0>;
         };
 
         combo_lbrace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <15 16>;
+            layers = <0>;
         };
 
         combo_lpar {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <27 28>;
+            layers = <0>;
         };
 
         combo_rbracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         combo_rbrace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         combo_rpar {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         combo_langle {
             bindings = <&kp LESS_THAN>;
             key-positions = <13 14>;
+            layers = <0>;
         };
 
         combo_rangle {
             bindings = <&kp GREATER_THAN>;
             key-positions = <21 22>;
+            layers = <0>;
         };
 
         // 36-key trial: extra combo paths to MINUS, GRAVE and BACKSLASH,
@@ -57,16 +65,19 @@
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <16 19>;
+            layers = <0>;
         };
 
         combo_grave {
             bindings = <&kp GRAVE>;
             key-positions = <17 18>;
+            layers = <0>;
         };
 
         combo_backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <13 22>;
+            layers = <0>;
         };
 
         // A+O double as LSHFT/RSHFT, so shift+combo_backslash can't be used
@@ -74,6 +85,7 @@
         combo_pipe {
             bindings = <&kp PIPE>;
             key-positions = <25 34>;
+            layers = <0>;
         };
     };
 
@@ -107,15 +119,6 @@
 &bt BT_NXT  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
 &bt BT_PRV  &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans             &bt BT_CLR
                             &trans  &trans  &trans     &trans         &trans                &trans
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
