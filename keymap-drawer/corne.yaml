@@ -157,16 +157,16 @@ combos:
 - p: [16, 19]
   k: '-'
   l: [Base]
-  align: top
-  offset: 1
+  a: top
+  o: 1.0
 - p: [17, 18]
   k: '`'
   l: [Base]
 - p: [13, 22]
   k: \
   l: [Base]
-  align: bottom
-  offset: 1
+  a: bottom
+  o: 1.0
 - p: [25, 34]
   k: '|'
   l: [Base]
