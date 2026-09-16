@@ -106,7 +106,7 @@
             display-name = "Sym Num";
             bindings = <
 &trans   &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans    &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
-&trans   &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans    &kp PLUS      &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &trans
+&trans   &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &trans
 &trans   &trans  &kp EXCLAMATION  &kp AT        &kp HASH   &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans
                                   &trans        &trans     &trans    &trans        &trans        &trans
             >;
@@ -115,9 +115,9 @@
         brd_sym_layer {
             display-name = "Brd Func";
             bindings = <
-&trans      &trans  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME              &kp UP_ARROW          &kp END    &kp C_VOLUME_UP    &trans
-&bt BT_NXT  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
-&bt BT_PRV  &trans  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans             &bt BT_CLR
+&trans  &bt BT_CLR  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME              &kp UP_ARROW          &kp END    &kp C_VOLUME_UP    &trans
+&trans  &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
+&trans  &bt BT_PRV  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans             &trans
                             &trans  &trans  &trans     &trans         &trans                &trans
             >;
         };
