@@ -1,5 +1,6 @@
 on:
   push:
+    branches: [master]
     paths:
       - "config/*.keymap"
   workflow_dispatch:
