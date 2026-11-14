@@ -120,7 +120,7 @@ layers:
   - {t: ▽, type: trans}
   - BRIGHTNESS DEC
   - BRIGHTNESS INC
-  - {t: ▽, type: trans}
+  - {t: Gui+Sft+Ctl+4, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
