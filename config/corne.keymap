@@ -59,52 +59,23 @@
             key-positions = <21 22>;
             layers = <0>;
         };
-
-        // 36-key trial: extra combo paths to MINUS, GRAVE and BACKSLASH,
-        // previewing where they'd live once the outer pinky column is dropped.
-        combo_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <16 19>;
-            layers = <0>;
-        };
-
-        combo_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <17 18>;
-            layers = <0>;
-        };
-
-        // B+J (row 0) and V+K (row 2) echo combo_grave's shape: adjacent
-        // center columns, not mod-tapped, no full-hand pinky stretch like
-        // A+O/Z+FSLH required.
-        combo_backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <5 6>;
-            layers = <0>;
-        };
-
-        combo_pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <29 30>;
-            layers = <0>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Base";
+            display-name = "BASE";
             bindings = <
 &kp ESC    &kp Q        &kp W       &kp F        &kp P       &kp B          &kp J        &kp L            &kp U                &kp Y            &kp SEMICOLON  &kp MINUS
 &kp GRAVE  &hml LSHFT A  &hml LALT R  &hml LCTRL S  &hml LGUI T  &kp G          &kp M        &hmr RGUI N       &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RSHFT O    &kp APOSTROPHE
-&trans     &kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H            &kp COMMA            &kp DOT          &kp FSLH       &kp BACKSLASH
-                                    &kp ESC      &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &bspc_lt 2 BACKSPACE  &kp APOSTROPHE
+&kp LCTRL  &kp Z        &kp X       &kp C        &kp D       &kp V          &kp K        &kp H            &kp COMMA            &kp DOT          &kp FSLH       &kp BACKSLASH
+                                    &kp LGUI     &lt 2 TAB   &lt 1 SPACE    &lt 1 ENTER  &bspc_lt 2 BACKSPACE  &kp RALT
             >;
         };
 
         sym_num_layer {
-            display-name = "Sym Num";
+            display-name = "SYM";
             bindings = <
 &trans   &trans  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &trans    &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
 &trans   &trans  &kp DOLLAR       &kp PERCENT   &kp CARET  &trans    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &trans
@@ -114,12 +85,12 @@
         };
 
         brd_sym_layer {
-            display-name = "Brd Func";
+            display-name = "FUN";
             bindings = <
-&trans  &bt BT_CLR  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME              &kp UP_ARROW          &kp END    &kp C_VOLUME_UP    &trans
-&trans  &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT_ARROW        &kp DOWN              &kp RIGHT  &kp C_VOLUME_DOWN  &trans
-&trans  &bt BT_PRV  &kp F1  &kp F2  &kp F3  &kp F10    &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(LS(LC(N4)))  &trans             &trans
-                            &trans  &trans  &trans     &trans         &trans                &trans
+&trans          &bt BT_CLR  &kp F7  &kp F8  &kp F9  &kp F12    &kp PAGE_UP    &kp HOME      &kp UP_ARROW    &kp END        &kp C_VOLUME_UP    &kp C_MUTE
+&trans          &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11    &kp PAGE_DOWN  &kp LEFT      &kp DOWN        &kp RIGHT      &kp C_VOLUME_DOWN  &trans
+&studio_unlock  &bt BT_PRV  &kp F1  &kp F2  &kp F3  &kp F10    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4       &kp LG(LS(LC(N4)))
+                            &trans  &trans  &trans    &kp C_BRIGHTNESS_DEC     &trans        &kp C_BRIGHTNESS_INC
             >;
         };
     };
